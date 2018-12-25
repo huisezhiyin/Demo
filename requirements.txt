@@ -1,0 +1,12 @@
+django
+gunicorn
+redis
+django-redis
+celery
+PyMySQL
+mysqlclient
+djangorestframework
+django-filter
+requests
+ipython
+django-celery-results
