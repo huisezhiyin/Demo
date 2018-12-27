@@ -56,6 +56,8 @@ class UserViewSet(GenericViewSet):
 
     @action(methods=["GET"], detail=True)
     def info(self, request, *args, **kwargs):
+        # django中常用的获取当前用户的方法
         user = request.user
+        # 目前暂时没有做info的详细 可以只返回一个id
+        return Response({"user_id":user.id})
 
-        pass
