@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_celery_results',
     'app_ex.zeus',
+    'app_ex.hera',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +77,12 @@ WSGI_APPLICATION = 'Demo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # mysql引擎
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            # 配置文件的路径
+            'read_default_file': 'conf/database.cnf',
+        },
     }
 }
 
