@@ -25,7 +25,7 @@ class UserViewSet(GenericViewSet):
         user = User.objects.create_user(
             username=username,
             password=password)
-        return Response({"msg": "success"})
+        return Response({"msg": "success","user_id":user.id})
 
     # 登录，post方法
     @action(methods=["POST"], detail=False)
