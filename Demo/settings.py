@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django_celery_results',
     'app_ex.zeus',
     'app_ex.hera',
+    'app_ex.poseidon',
 ]
 
 MIDDLEWARE = [
